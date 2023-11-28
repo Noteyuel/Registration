@@ -12,7 +12,6 @@ abstract public class StudInfo {
     abstract public void underGraduateRegisteration(int y);
     abstract public void graduateRegistration(int x);
 
-    //abstract void displayInfo(String firstName, String sirName, String lastName, String id, String dept, int age);
 
     abstract void displayInfo(String firstName, String sirName, String lastName, String id, String dept,int age);
 }
