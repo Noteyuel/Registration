@@ -15,7 +15,7 @@ public class StudentRegister extends Student{
         boolean con = true;
         int number_of_students;
         Scanner in = new Scanner(System.in);
-//
+
 while (con){
             try {
                 System.out.println("Enter number of students to be registered.");
