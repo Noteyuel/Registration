@@ -1,11 +1,12 @@
 package studentRegisteration;
-
+//code for student registration 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 public class StudentRegister extends Student{
+    //subclass constructor 
     StudentRegister(String firstName, String sirName, String lastName, String id, String dept, int age) {
-
+        //calls the super class constructor.
         super(firstName, sirName, lastName, id, dept, age);
     }
 
@@ -14,7 +15,7 @@ public class StudentRegister extends Student{
         boolean con = true;
         int number_of_students;
         Scanner in = new Scanner(System.in);
-
+//
 while (con){
             try {
                 System.out.println("Enter number of students to be registered.");
@@ -65,7 +66,7 @@ class Student extends StudInfo{
     String sirName;
     String id;
     String dept;
-
+//constructor for instantiation of the instance variables.
     Student(String firstName, String sirName, String lastName, String id, String dept, int age) {
         this.age = age;
         this.firstName = firstName;
@@ -74,7 +75,8 @@ class Student extends StudInfo{
         this.id = id;
         this.dept = dept;
     }
-
+//Method for the dedicated display student information.
+//overriden method for the abstract class of StudInfo.
 
     @Override
     void displayInfo() {
@@ -83,10 +85,12 @@ class Student extends StudInfo{
         System.out.println("Student's age : " + age);
         System.out.println("Student's Department : " + dept);
     }
+    //Method for the dedicated graduate registration
+//overriden method for the abstract class of StudInfo
 
     @Override
     public void graduateRegistration(int x) {
-
+            //declared array for the purpose of storing student information.
             ArrayList<String> gradStudInfo = new ArrayList<String>();
             Scanner get = new Scanner(System.in);
             System.out.println(">>>>>>>>>>>>>>>STUDENT REGISTERATION<<<<<<<<<<<<<<<<");
@@ -122,9 +126,11 @@ class Student extends StudInfo{
     }
 
 
-
+//Method for the dedicated undergraduate registration
+//overriden method for the abstract class of StudInfo
     @Override
     public void underGraduateRegisteration(int y) {
+        //declared array for the purpose of storing student information.
         ArrayList<String> unStudInfo  = new ArrayList<String>();
 
             Scanner get = new Scanner(System.in);
@@ -158,6 +164,8 @@ class Student extends StudInfo{
             unStudInfo.add(dept);
             System.out.println(unStudInfo);
     }
+    //Method for the display with the given parameters student information.
+//overriden method for the abstract class of StudInfo.
     @Override
     void displayInfo(String firstName, String sirName, String lastName, String id, String dept,int age){
         System.out.println("Student's name : " + firstName + " " + sirName + " " + lastName);
